@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Backward Agent</title>
+  <meta name="description" content="Build AI agents last-to-first. Run them first-to-last.">
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --fg: #e8edf2;
+      --muted: #8b97a5;
+      --line: #2a323c;
+      --accent: #7ee0b0;
+      --card: #14181d;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 ui-sans-serif, system-ui, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    .kicker { color: var(--accent); letter-spacing: .12em; text-transform: uppercase; font-size: .72rem; font-weight: 700; }
+    h1 { font-size: 2.2rem; line-height: 1.1; margin: .4rem 0 1rem; }
+    p.lead { color: var(--muted); font-size: 1.05rem; }
+    ol.layers { list-style: none; padding: 0; margin: 2rem 0; }
+    ol.layers li {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      margin: 0 0 .7rem;
+    }
+    ol.layers .n { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+    ol.layers strong { display: block; margin: .15rem 0 .2rem; }
+    ol.layers span { color: var(--muted); font-size: .95rem; }
+    pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    pre {
+      background: #0e1216;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-size: .88rem;
+    }
+    a { color: var(--accent); }
+    footer { margin-top: 2.5rem; color: var(--muted); font-size: .9rem; }
+    .row { display: flex; gap: .6rem; flex-wrap: wrap; margin: 1.2rem 0 0; }
+    .row a {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: .45rem .9rem;
+      text-decoration: none;
+      color: var(--fg);
+    }
+    .row a.primary { background: var(--accent); color: #082016; font-weight: 700; border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="kicker">fitzyracing1 / backward-agent</div>
+    <h1>Build the agent backwards.</h1>
+    <p class="lead">Start with the finished artifact and the test that proves it. Then the last act. Then preconditions. Then gather. Then intake. Run the other way.</p>
+    <ol class="layers">
+      <li><div class="n">01</div><strong>Done picture</strong><span>Name the world after success and the exact file that must exist.</span></li>
+      <li><div class="n">02</div><strong>Terminal test</strong><span>A predicate. File exists, size holds, required headings are present.</span></li>
+      <li><div class="n">03</div><strong>Last act</strong><span>The single write or call that would make the test pass.</span></li>
+      <li><div class="n">04</div><strong>Preconditions</strong><span>Smallest observable facts the last act needs.</span></li>
+      <li><div class="n">05</div><strong>Gather</strong><span>Cheapest observations that produce those facts.</span></li>
+      <li><div class="n">06</div><strong>Intake</strong><span>Raw line becomes one sentence. Then the loop runs forward.</span></li>
+    </ol>
+    <pre>python3 scripts/backward_agent.py --goal "your goal"</pre>
+    <div class="row">
+      <a class="primary" href="https://github.com/fitzyracing1/backward-agent">Repo</a>
+      <a href="https://github.com/fitzyracing1/backward-agent/blob/main/scripts/backward_agent.py">Script</a>
+      <a href="https://github.com/fitzyracing1/backward-agent/blob/main/proof/RESULT.md">Proof</a>
+      <a href="https://github.com/fitzyracing1/backward-agent/blob/main/SKILL.md">Skill</a>
+    </div>
+    <footer>First pass terminal test: pass. Built last-to-first, ran first-to-last.</footer>
+  </main>
+</body>
+</html>

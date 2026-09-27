@@ -1,0 +1,10 @@
+{
+  "done_picture": "A readable RESULT.md exists proving the goal was reverse-built and the terminal test passed.",
+  "artifact_path": "proof/RESULT.md",
+  "terminal_test": "file exists AND size > 80 bytes AND contains headings DONE PICTURE, LAST ACT, TERMINAL TEST, PROOF",
+  "last_act": "write RESULT.md from gathered facts plus layer record",
+  "preconditions": ["goal text is nonempty", "layers object is complete", "output directory exists and is writable"],
+  "gather": ["read --goal argument", "confirm ROOT.mkdir succeeded", "stamp UTC time"],
+  "intake": "raw line -> one-sentence goal; if empty use 'prove backward construction'",
+  "built_at": "2026-09-27T01:55:53.784367+00:00"
+}
