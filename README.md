@@ -32,3 +32,8 @@ proof/LAYERS.md
 proof/LAYERS.json
 .github/workflows/pages.yml
 ```
+
+## Documentation
+
+- In-repo docs: [docs/](docs/index.md)
+- Wiki: [https://github.com/fitzyracing1/backward-agent/wiki](https://github.com/fitzyracing1/backward-agent/wiki)
